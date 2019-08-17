@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Slider Button</title>
+    <style media="screen">
+      label {
+        width: 60px;
+        height: 30px;
+        background: black;
+        display: block;
+        border-radius: 30px;
+        position: relative;
+        border: 3px solid black;
+      }
+      label input {
+        display: none;
+      }
+      label .slider {
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        transition: all 0.3s ease;
+        display: block;
+        top: 50%;
+        right: 100%;
+        transform: translate(100%, -50%);
+        background: white;
+        border-radius: 50%;
+      }
+      label input:checked + .slider {
+        right: 0;
+        transform: translate(0%, -50%);
+        background: #10b5e6;
+      }
+    </style>
+  </head>
+  <body>
+    <label for="switch">
+       <input type="checkbox" id="switch">
+      <span class="slider"></span>
+    </label>
+  </body>
+</html>
